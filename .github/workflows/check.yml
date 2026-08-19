@@ -1,0 +1,26 @@
+name: check
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate skill frontmatter and bundle wiring
+        run: |
+          node --input-type=module -e '
+            import { readFileSync } from "node:fs";
+            const skill = readFileSync("skills/wavespeed/SKILL.md", "utf8");
+            const fm = skill.match(/^---\n([\s\S]*?)\n---/);
+            if (!fm) throw new Error("SKILL.md: missing YAML frontmatter");
+            for (const key of ["name:", "description:"])
+              if (!fm[1].includes(key)) throw new Error(`SKILL.md frontmatter: missing ${key}`);
+            const pkg = JSON.parse(readFileSync("package.json", "utf8"));
+            if (!pkg.dsh?.bundle?.patch) throw new Error("package.json: missing dsh.bundle.patch");
+            const patch = readFileSync(pkg.dsh.bundle.patch, "utf8");
+            if (!patch.includes(pkg.name)) throw new Error("cordis.patch.yml: package name mismatch");
+            const entry = readFileSync(pkg.main, "utf8");
+            if (!entry.includes("skills/wavespeed")) throw new Error("entry: skill dir mismatch");
+            console.log("ok: frontmatter, manifest, patch and entry are consistent");
+          '
