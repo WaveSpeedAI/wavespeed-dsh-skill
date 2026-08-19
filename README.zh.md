@@ -1,5 +1,7 @@
 # WaveSpeed skill for DeepSeek Harness
 
+[English](README.md)
+
 一个 [DeepSeek Harness](https://github.com/deepseek-ai/harness)（dsh）技能包：让 agent 通过 [WaveSpeed](https://wavespeed.ai) 平台生成与编辑 AI 媒体——图像、视频、音频、3D，底层使用开源的 [`@wavespeed/cli`](https://github.com/WaveSpeedAI/wavespeed-cli)。
 
 平台上的每个模型都是一条 `wavespeed run <model-id>` 命令。技能教会 agent「查找 → 检查 → 运行」三步模式：搜索实时模型目录、读取任意模型的输入 schema、执行生成——包括用 `@path` 标记自动上传本地文件。

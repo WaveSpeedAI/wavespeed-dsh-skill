@@ -1,5 +1,7 @@
 # WaveSpeed skill for DeepSeek Harness
 
+[中文](README.zh.md)
+
 A [DeepSeek Harness](https://github.com/deepseek-ai/harness) (dsh) skill that lets the agent generate and edit AI media — image, video, audio, 3D — through the [WaveSpeed](https://wavespeed.ai) platform, using the open-source [`@wavespeed/cli`](https://github.com/WaveSpeedAI/wavespeed-cli).
 
 Every model on the platform is one `wavespeed run <model-id>` call. The skill teaches the agent the find → inspect → run pattern, so it can browse the live catalog, read any model's input schema, and execute it — including uploading local files with the `@path` marker.
