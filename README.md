@@ -12,12 +12,19 @@ Every model on the platform is one `wavespeed run <model-id>` call. The skill te
 
 ## Install
 
-Project-level (recommended — checked into the repo, shared with your team):
+As a dsh plugin (recommended — the bundle registers the skill automatically):
+
+```bash
+dsh plugin add github:WaveSpeedAI/wavespeed-dsh-skill
+```
+
+Or copy the skill directory by hand — project-level (checked into the repo,
+shared with your team):
 
 ```bash
 mkdir -p .dsh/skills
 git clone --depth 1 https://github.com/WaveSpeedAI/wavespeed-dsh-skill /tmp/wss \
-  && cp -r /tmp/wss/wavespeed .dsh/skills/ && rm -rf /tmp/wss
+  && cp -r /tmp/wss/skills/wavespeed .dsh/skills/ && rm -rf /tmp/wss
 ```
 
 User-level (available in every project):
@@ -25,7 +32,7 @@ User-level (available in every project):
 ```bash
 mkdir -p ~/.dsh/skills
 git clone --depth 1 https://github.com/WaveSpeedAI/wavespeed-dsh-skill /tmp/wss \
-  && cp -r /tmp/wss/wavespeed ~/.dsh/skills/ && rm -rf /tmp/wss
+  && cp -r /tmp/wss/skills/wavespeed ~/.dsh/skills/ && rm -rf /tmp/wss
 ```
 
 Other agents (Claude Code, Cursor, Codex): the CLI installs the same skill directly —
