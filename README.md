@@ -17,7 +17,7 @@ Every model on the platform is one `wavespeed run <model-id>` call. The skill te
 As a dsh plugin (recommended — the bundle registers the skill automatically):
 
 ```bash
-dsh plugin add github:WaveSpeedAI/wavespeed-dsh-skill
+dsh plugin --profile web add github:WaveSpeedAI/wavespeed-dsh-skill
 ```
 
 Or copy the skill directory by hand — project-level (checked into the repo,

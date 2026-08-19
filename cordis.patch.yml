@@ -1,6 +1,6 @@
 # DSH bundle profile patch.
 # Makes the plugin installable AND active via:
-#   dsh plugin add github:WaveSpeedAI/wavespeed-dsh-skill
+#   dsh plugin --profile web add github:WaveSpeedAI/wavespeed-dsh-skill
 # `id` = the Cordis plugin id (see `export const name` in index.mjs)
 # `name` = the npm package name (resolved from node_modules after install)
 - insert:

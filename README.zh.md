@@ -17,7 +17,7 @@
 作为 dsh 插件（推荐——bundle 会自动注册技能）：
 
 ```bash
-dsh plugin add github:WaveSpeedAI/wavespeed-dsh-skill
+dsh plugin --profile web add github:WaveSpeedAI/wavespeed-dsh-skill
 ```
 
 或手动复制技能目录——项目级（进 git，团队共享）：
