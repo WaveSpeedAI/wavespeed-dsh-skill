@@ -1,0 +1,38 @@
+{
+  "name": "wavespeed-dsh-skill",
+  "version": "0.1.0",
+  "description": "WaveSpeed skill for DeepSeek Harness (dsh): generate and edit AI media (image, video, audio, 3D) via the open-source wavespeed CLI.",
+  "type": "module",
+  "main": "./index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "cordis.patch.yml",
+    "skills"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "keywords": [
+    "wavespeed",
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "skill",
+    "ai-image-generation",
+    "ai-video-generation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaveSpeedAI/wavespeed-dsh-skill.git"
+  },
+  "homepage": "https://wavespeed.ai"
+}
