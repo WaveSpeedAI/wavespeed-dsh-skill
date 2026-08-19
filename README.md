@@ -47,17 +47,17 @@ wavespeed skill install
 
 ```bash
 # text → image
-wavespeed run google/nano-banana-2/text-to-image -p "a cyberpunk skyline at golden hour" --json
+wavespeed run bytedance/seedream-v5.0-pro -p "a cyberpunk skyline at golden hour" --json
 
 # edit a local image (uploaded automatically via @path)
-wavespeed run google/nano-banana-2/edit -p "replace the background with a sunlit kitchen" \
+wavespeed run bytedance/seedream-v5.0-pro/edit -p "replace the background with a sunlit kitchen" \
   -i images='["@./input.jpg"]' --json
 
 # image → video
-wavespeed run bytedance/seedance-2.0/image-to-video -p "subtle parallax" -i image=@./hero.jpg --json
+wavespeed run bytedance/seedance-2.5/image-to-video -p "subtle parallax" -i image=@./hero.jpg --json
 
 # check the cost before running anything
-wavespeed price google/nano-banana-2/text-to-image -i resolution=2k
+wavespeed price bytedance/seedream-v5.0-pro -i resolution=2k
 ```
 
 The skill also covers project aliases (`wavespeed.json`), schema introspection, price/balance checks, and prediction history.

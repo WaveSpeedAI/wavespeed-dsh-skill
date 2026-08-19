@@ -46,17 +46,17 @@ wavespeed skill install
 
 ```bash
 # 文生图
-wavespeed run google/nano-banana-2/text-to-image -p "a cyberpunk skyline at golden hour" --json
+wavespeed run bytedance/seedream-v5.0-pro -p "a cyberpunk skyline at golden hour" --json
 
 # 编辑本地图片（@path 自动上传）
-wavespeed run google/nano-banana-2/edit -p "replace the background with a sunlit kitchen" \
+wavespeed run bytedance/seedream-v5.0-pro/edit -p "replace the background with a sunlit kitchen" \
   -i images='["@./input.jpg"]' --json
 
 # 图生视频
-wavespeed run bytedance/seedance-2.0/image-to-video -p "subtle parallax" -i image=@./hero.jpg --json
+wavespeed run bytedance/seedance-2.5/image-to-video -p "subtle parallax" -i image=@./hero.jpg --json
 
 # 运行前先查价格
-wavespeed price google/nano-banana-2/text-to-image -i resolution=2k
+wavespeed price bytedance/seedream-v5.0-pro -i resolution=2k
 ```
 
 技能还覆盖项目别名（`wavespeed.json`）、schema 自省、价格/余额查询与生成历史。
