@@ -65,3 +65,8 @@ The skill also covers project aliases (`wavespeed.json`), schema introspection, 
 ## License
 
 [MIT](LICENSE) — same as the CLI.
+
+---
+
+**[WaveSpeed AI](https://wavespeed.ai/)** — AI image & video generation platform.
+Try it in the browser: **[Image generator](https://wavespeed.ai/image-generator)** · **[Video generator](https://wavespeed.ai/video-generator)**
