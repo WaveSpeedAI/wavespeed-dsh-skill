@@ -54,7 +54,7 @@ wavespeed run bytedance/seedream-v5.0-pro/edit -p "replace the background with a
   -i images='["@./input.jpg"]' --json
 
 # image → video
-wavespeed run bytedance/seedance-2.5/image-to-video -p "subtle parallax" -i image=@./hero.jpg --json
+wavespeed run wavespeed-ai/minimax-h3/image-to-video -p "subtle parallax" -i image=@./hero.jpg --json
 
 # check the cost before running anything
 wavespeed price bytedance/seedream-v5.0-pro -i resolution=2k
