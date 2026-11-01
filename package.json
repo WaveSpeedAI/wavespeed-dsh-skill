@@ -1,6 +1,6 @@
 {
   "name": "wavespeed-dsh-skill",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "WaveSpeed skill for DeepSeek Harness (dsh): generate and edit AI media (image, video, audio, 3D) via the open-source wavespeed CLI.",
   "type": "module",
   "main": "./index.mjs",
