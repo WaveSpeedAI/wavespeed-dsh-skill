@@ -45,18 +45,17 @@ wavespeed skill install
 ## agent 能用它做什么
 
 ```bash
-# 文生图
-wavespeed run bytedance/seedream-v5.0-pro -p "a cyberpunk skyline at golden hour" --json
+# 文生图（默认模型 Seedream 5 Pro）
+wavespeed generate image "a cyberpunk skyline at golden hour" --json
 
 # 编辑本地图片（@path 自动上传）
-wavespeed run bytedance/seedream-v5.0-pro/edit -p "replace the background with a sunlit kitchen" \
-  -i images='["@./input.jpg"]' --json
+wavespeed edit image "replace the background with a sunlit kitchen" --image @./input.jpg --json
 
-# 图生视频
-wavespeed run wavespeed-ai/minimax-h3/image-to-video -p "subtle parallax" -i image=@./hero.jpg --json
+# 图生视频（默认模型 Seedance 2.5），先估价，不会提交
+wavespeed generate video "subtle parallax" --first-frame @./hero.jpg --estimate --json
 
-# 运行前先查价格
-wavespeed price bytedance/seedream-v5.0-pro -i resolution=2k
+# 平台上的任何其他模型
+wavespeed run <model-id> -p "..." --json
 ```
 
 技能还覆盖项目别名（`wavespeed.json`）、schema 自省、价格/余额查询与生成历史。

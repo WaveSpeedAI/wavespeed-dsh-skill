@@ -46,18 +46,17 @@ wavespeed skill install
 ## What the agent can do with it
 
 ```bash
-# text → image
-wavespeed run bytedance/seedream-v5.0-pro -p "a cyberpunk skyline at golden hour" --json
+# text → image (default model: Seedream 5 Pro)
+wavespeed generate image "a cyberpunk skyline at golden hour" --json
 
 # edit a local image (uploaded automatically via @path)
-wavespeed run bytedance/seedream-v5.0-pro/edit -p "replace the background with a sunlit kitchen" \
-  -i images='["@./input.jpg"]' --json
+wavespeed edit image "replace the background with a sunlit kitchen" --image @./input.jpg --json
 
-# image → video
-wavespeed run wavespeed-ai/minimax-h3/image-to-video -p "subtle parallax" -i image=@./hero.jpg --json
+# image → video (default model: Seedance 2.5); price it first, nothing is submitted
+wavespeed generate video "subtle parallax" --first-frame @./hero.jpg --estimate --json
 
-# check the cost before running anything
-wavespeed price bytedance/seedream-v5.0-pro -i resolution=2k
+# any other model on the platform
+wavespeed run <model-id> -p "..." --json
 ```
 
 The skill also covers project aliases (`wavespeed.json`), schema introspection, price/balance checks, and prediction history.
