@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-一个 [DeepSeek Harness](https://github.com/deepseek-ai/harness)（dsh）技能包：让 agent 通过 [WaveSpeed](https://wavespeed.ai) 平台生成与编辑 AI 媒体——图像、视频、音频、3D，底层使用开源的 [`@wavespeed/cli`](https://github.com/WaveSpeedAI/wavespeed-cli)。
+一个 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）技能包：让 agent 通过 [WaveSpeed](https://wavespeed.ai) 平台生成与编辑 AI 媒体——图像、视频、音频、3D，底层使用开源的 [`@wavespeed/cli`](https://github.com/WaveSpeedAI/wavespeed-cli)。
 
 图片和视频走 CLI 的快捷命令（`wavespeed generate|edit|extend`，默认模型 Seedream 5 Pro 和 Seedance 2.5），连接了 WaveSpeed MCP 时也可直接用它的工具。平台上的其他模型都是一条 `wavespeed run <model-id>` 命令：技能教会 agent 搜索实时模型目录、读取任意模型的输入 schema、执行生成——包括用 `@path` 标记自动上传本地文件。
 
@@ -41,6 +41,8 @@ git clone --depth 1 https://github.com/WaveSpeedAI/wavespeed-dsh-skill /tmp/wss 
 ```bash
 wavespeed skill install
 ```
+
+同一份技能和 MCP 服务的插件包：[Claude Code](https://github.com/WaveSpeedAI/claude-plugins), [Codex](https://github.com/WaveSpeedAI/codex-plugins), [Gemini CLI](https://github.com/WaveSpeedAI/wavespeed-gemini-extension), [Kimi Code CLI](https://github.com/WaveSpeedAI/wavespeed-kimi-plugin), [OpenCode](https://github.com/WaveSpeedAI/wavespeed-opencode)。
 
 ## agent 能用它做什么
 

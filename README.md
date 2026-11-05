@@ -2,7 +2,7 @@
 
 [中文](README.zh.md)
 
-A [DeepSeek Harness](https://github.com/deepseek-ai/harness) (dsh) skill that lets the agent generate and edit AI media — image, video, audio, 3D — through the [WaveSpeed](https://wavespeed.ai) platform, using the open-source [`@wavespeed/cli`](https://github.com/WaveSpeedAI/wavespeed-cli).
+A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh) skill that lets the agent generate and edit AI media — image, video, audio, 3D — through the [WaveSpeed](https://wavespeed.ai) platform, using the open-source [`@wavespeed/cli`](https://github.com/WaveSpeedAI/wavespeed-cli).
 
 For images and videos the skill uses the CLI's shortcuts (`wavespeed generate|edit|extend`, defaults Seedream 5 Pro and Seedance 2.5), and the WaveSpeed MCP tools when they are connected. Every other model on the platform is one `wavespeed run <model-id>` call: the skill teaches the agent to browse the live catalog, read any model's input schema, and execute it — including uploading local files with the `@path` marker.
 
@@ -42,6 +42,8 @@ Other agents (Claude Code, Cursor, Codex): the CLI installs the same skill direc
 ```bash
 wavespeed skill install
 ```
+
+Packaged plugins with the same skill and MCP server: [Claude Code](https://github.com/WaveSpeedAI/claude-plugins), [Codex](https://github.com/WaveSpeedAI/codex-plugins), [Gemini CLI](https://github.com/WaveSpeedAI/wavespeed-gemini-extension), [Kimi Code CLI](https://github.com/WaveSpeedAI/wavespeed-kimi-plugin), [OpenCode](https://github.com/WaveSpeedAI/wavespeed-opencode).
 
 ## What the agent can do with it
 
